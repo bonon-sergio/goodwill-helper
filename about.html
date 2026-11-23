@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About the Project – Goodwill Dallas Helper</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1f4e9c;
+      --blue-dark: #163a75;
+      --accent: #f2a541;
+      --text: #1d2433;
+      --muted: #5b6475;
+      --bg: #f6f8fc;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; color: var(--text); background: var(--bg); line-height: 1.7; }
+
+    .disclaimer { background: #fff4e0; color: #7a4b00; text-align: center; font-size: 0.85rem; padding: 8px 16px; }
+
+    header { display: flex; justify-content: space-between; align-items: center; padding: 16px 5%; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 10; }
+    .brand { font-weight: 700; font-size: 1.2rem; color: var(--blue); text-decoration: none; }
+    .lang-btn { background: var(--blue); color: #fff; border: none; padding: 8px 18px; border-radius: 999px; font-family: inherit; font-weight: 600; cursor: pointer; }
+    .lang-btn:hover { background: var(--blue-dark); }
+
+    .banner { background: linear-gradient(135deg, var(--blue), var(--blue-dark)); color: #fff; text-align: center; padding: 64px 5%; }
+    .banner h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 8px; }
+    .banner p { opacity: 0.9; max-width: 640px; margin: 0 auto; }
+
+    main { max-width: 860px; margin: 0 auto; padding: 56px 5%; }
+    .block { background: var(--card); border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+    .block h2 { color: var(--blue); margin-bottom: 12px; font-size: 1.4rem; }
+    .block p { color: var(--muted); margin-bottom: 12px; }
+    .block ul { padding-left: 20px; color: var(--muted); }
+    .block li { margin-bottom: 8px; }
+
+    .steps { counter-reset: step; list-style: none; padding-left: 0 !important; }
+    .steps li { counter-increment: step; position: relative; padding-left: 44px; margin-bottom: 14px; }
+    .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: var(--text); font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+    .center { text-align: center; margin-top: 32px; }
+    .btn { display: inline-block; background: var(--accent); color: var(--text); text-decoration: none; font-weight: 600; padding: 14px 32px; border-radius: 999px; transition: transform 0.2s, box-shadow 0.2s; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+
+    footer { background: var(--blue-dark); color: #dbe4f5; padding: 24px 5%; text-align: center; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <div class="disclaimer" data-en="Student class project (SMU MBA) – not an official Goodwill Dallas website." data-es="Proyecto de clase estudiantil (SMU MBA) – no es un sitio web oficial de Goodwill Dallas."></div>
+
+  <header>
+    <a href="index.html" class="brand">Goodwill Dallas Helper</a>
+    <button class="lang-btn" id="langBtn">Español</button>
+  </header>
+
+  <section class="banner">
+    <h1 data-en="About the Project" data-es="Sobre el proyecto"></h1>
+    <p data-en="Why we built the Goodwill Dallas Helper and how it makes information easier to find." data-es="Por qué creamos el Goodwill Dallas Helper y cómo facilita encontrar información."></p>
+  </section>
+
+  <main>
+    <div class="block">
+      <h2 data-en="The problem" data-es="El problema"></h2>
+      <p data-en="Goodwill Dallas serves many different people: shoppers looking for a nearby store, donors who want to know what they can give, and job seekers interested in training and employment programs. The information each of them needs is spread across many different web pages, which makes it hard for first-time visitors to find answers quickly." data-es="Goodwill Dallas atiende a muchas personas diferentes: compradores que buscan una tienda cercana, donantes que quieren saber qué pueden donar y personas que buscan empleo interesadas en programas de capacitación. La información que cada uno necesita está repartida en muchas páginas web distintas, lo que dificulta que los visitantes nuevos encuentren respuestas rápidamente."></p>
+      <p data-en="As a result, many simple questions end up as phone calls or emails to store staff, taking time away from serving customers in person." data-es="Como resultado, muchas preguntas sencillas terminan siendo llamadas o correos al personal de las tiendas, quitándoles tiempo para atender a los clientes en persona."></p>
+    </div>
+
+    <div class="block">
+      <h2 data-en="Our solution" data-es="Nuestra solución"></h2>
+      <p data-en="The Goodwill Dallas Helper is an AI chatbot that works as a 24/7 virtual front desk. It is trained on publicly available information from the Goodwill Dallas website and follows custom instructions to give short, accurate answers. When it doesn't know something, it says so and directs users to the website or their nearest store instead of guessing." data-es="El Goodwill Dallas Helper es un chatbot de IA que funciona como una recepción virtual las 24 horas. Está entrenado con información pública del sitio web de Goodwill Dallas y sigue instrucciones personalizadas para dar respuestas breves y precisas. Cuando no sabe algo, lo dice y dirige a los usuarios al sitio web o a su tienda más cercana en lugar de adivinar."></p>
+      <ul>
+        <li data-en="📍 Helps users find stores and their opening hours." data-es="📍 Ayuda a los usuarios a encontrar tiendas y sus horarios."></li>
+        <li data-en="🎁 Explains what items can be donated and how to drop them off." data-es="🎁 Explica qué artículos se pueden donar y cómo entregarlos."></li>
+        <li data-en="💼 Describes job, training, and community programs and how to get started." data-es="💼 Describe los programas de empleo, capacitación y comunidad, y cómo empezar."></li>
+        <li data-en="🌎 Responds in Spanish when users write in Spanish." data-es="🌎 Responde en español cuando los usuarios escriben en español."></li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2 data-en="How to use the assistant" data-es="Cómo usar el asistente"></h2>
+      <ol class="steps">
+        <li data-en="Click the chat button in the bottom corner of the page." data-es="Haz clic en el botón de chat en la esquina inferior de la página."></li>
+        <li data-en="Choose a topic (Find a store, Donate items, Job & training programs) or ask your own question." data-es="Elige un tema (Encontrar una tienda, Donar artículos, Programas de empleo y capacitación) o haz tu propia pregunta."></li>
+        <li data-en="Answer the short follow-up question so the assistant understands exactly what you need." data-es="Responde la breve pregunta de seguimiento para que el asistente entienda exactamente lo que necesitas."></li>
+        <li data-en="Keep asking. The assistant will help with as many questions as you have." data-es="Sigue preguntando. El asistente te ayudará con todas las preguntas que tengas."></li>
+      </ol>
+    </div>
+
+    <div class="block">
+      <h2 data-en="Why it matters" data-es="Por qué es importante"></h2>
+      <p data-en="By answering common questions instantly and in two languages, the assistant makes Goodwill's services easier to access for more people in the Dallas community, while freeing staff to focus on in-person service and the organization's mission of helping people build skills and find work." data-es="Al responder preguntas comunes al instante y en dos idiomas, el asistente facilita el acceso a los servicios de Goodwill para más personas en la comunidad de Dallas, mientras permite que el personal se concentre en la atención presencial y en la misión de la organización de ayudar a las personas a desarrollar habilidades y encontrar trabajo."></p>
+    </div>
+
+    <div class="center">
+      <a href="index.html" class="btn" data-en="← Back to home" data-es="← Volver al inicio"></a>
+    </div>
+  </main>
+
+  <footer>
+    <p data-en="Student class project – not affiliated with or endorsed by Goodwill Dallas." data-es="Proyecto de clase – no afiliado ni respaldado por Goodwill Dallas."></p>
+  </footer>
+
+  <script>
+    (function () {
+      var lang = 'en';
+      try { lang = localStorage.getItem('siteLang') || 'en'; } catch (e) {}
+      var btn = document.getElementById('langBtn');
+
+      function apply(l) {
+        document.querySelectorAll('[data-en]').forEach(function (el) {
+          el.textContent = el.getAttribute('data-' + l);
+        });
+        document.documentElement.lang = l;
+        btn.textContent = l === 'en' ? 'Español' : 'English';
+        try { localStorage.setItem('siteLang', l); } catch (e) {}
+      }
+
+      btn.addEventListener('click', function () {
+        lang = lang === 'en' ? 'es' : 'en';
+        apply(lang);
+      });
+
+      apply(lang);
+    })();
+  </script>
+
+  <!-- ===== CHATLING CHATBOT ===== -->
+  <script> window.chtlConfig = { chatbotId: "2835938614" } </script>
+  <script async data-id="2835938614" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+  <!-- ===== END CHATLING CHATBOT ===== -->
+
+</body>
+</html>

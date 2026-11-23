@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goodwill Dallas Helper – Student Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1f4e9c;
+      --blue-dark: #163a75;
+      --accent: #f2a541;
+      --text: #1d2433;
+      --muted: #5b6475;
+      --bg: #f6f8fc;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+
+    .disclaimer { background: #fff4e0; color: #7a4b00; text-align: center; font-size: 0.85rem; padding: 8px 16px; }
+
+    header { display: flex; justify-content: space-between; align-items: center; padding: 16px 5%; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 10; }
+    .brand { font-weight: 700; font-size: 1.2rem; color: var(--blue); }
+    .lang-btn { background: var(--blue); color: #fff; border: none; padding: 8px 18px; border-radius: 999px; font-family: inherit; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+    .lang-btn:hover { background: var(--blue-dark); }
+
+    .hero { position: relative; height: 75vh; min-height: 420px; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+    .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(10,25,60,0.55), rgba(10,25,60,0.7)); z-index: 1; }
+    .hero-content { position: relative; z-index: 2; color: #fff; padding: 0 24px; max-width: 760px; }
+    .hero-content h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.2; margin-bottom: 16px; }
+    .hero-content p { font-size: 1.1rem; margin-bottom: 28px; opacity: 0.95; }
+    .btn { display: inline-block; background: var(--accent); color: var(--text); text-decoration: none; font-weight: 600; padding: 14px 32px; border-radius: 999px; transition: transform 0.2s, box-shadow 0.2s; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.25); }
+
+    .section { padding: 64px 5%; max-width: 1100px; margin: 0 auto; }
+    .section h2 { text-align: center; font-size: 1.8rem; margin-bottom: 12px; color: var(--blue); }
+    .section .lead { text-align: center; color: var(--muted); margin-bottom: 40px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+    .card { background: var(--card); border-radius: 16px; padding: 28px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); transition: transform 0.2s; }
+    .card:hover { transform: translateY(-4px); }
+    .card .icon { font-size: 2rem; margin-bottom: 12px; }
+    .card h3 { margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+
+    .chat-hint { text-align: center; margin-top: 40px; color: var(--muted); }
+
+    footer { background: var(--blue-dark); color: #dbe4f5; padding: 32px 5%; text-align: center; font-size: 0.9rem; }
+    .xfactor { max-width: 640px; margin: 0 auto 16px; background: rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 20px; }
+    .xfactor strong { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <div class="disclaimer" data-en="Student class project (SMU MBA) – not an official Goodwill Dallas website." data-es="Proyecto de clase estudiantil (SMU MBA) – no es un sitio web oficial de Goodwill Dallas."></div>
+
+  <header>
+    <div class="brand">Goodwill Dallas Helper</div>
+    <button class="lang-btn" id="langBtn">Español</button>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1 data-en="Your 24/7 guide to Goodwill Dallas" data-es="Tu guía 24/7 de Goodwill Dallas"></h1>
+      <p data-en="Find stores and hours, learn how to donate, and discover job and training programs, all in one place." data-es="Encuentra tiendas y horarios, aprende cómo donar y descubre programas de empleo y capacitación, todo en un solo lugar."></p>
+      <a href="about.html" class="btn" data-en="Learn how it works →" data-es="Descubre cómo funciona →"></a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 data-en="How can we help you today?" data-es="¿Cómo podemos ayudarte hoy?"></h2>
+    <p class="lead" data-en="Ask our assistant about any of these topics using the chat button in the corner." data-es="Pregúntale a nuestro asistente sobre cualquiera de estos temas usando el botón de chat en la esquina."></p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📍</div>
+        <h3 data-en="Find a store" data-es="Encuentra una tienda"></h3>
+        <p data-en="Locate the Goodwill store closest to you and check its opening hours." data-es="Ubica la tienda Goodwill más cercana y consulta su horario de atención."></p>
+      </div>
+      <div class="card">
+        <div class="icon">🎁</div>
+        <h3 data-en="Donate items" data-es="Dona artículos"></h3>
+        <p data-en="Learn what items are accepted and how to drop off your donations." data-es="Conoce qué artículos se aceptan y cómo entregar tus donaciones."></p>
+      </div>
+      <div class="card">
+        <div class="icon">💼</div>
+        <h3 data-en="Job & training programs" data-es="Programas de empleo y capacitación"></h3>
+        <p data-en="Explore programs that help people build skills and find work." data-es="Explora programas que ayudan a las personas a desarrollar habilidades y encontrar trabajo."></p>
+      </div>
+    </div>
+    <p class="chat-hint" data-en="💬 Our assistant also speaks Spanish. Just write to it in your preferred language." data-es="💬 Nuestro asistente también habla inglés. Escríbele en el idioma que prefieras."></p>
+  </section>
+
+  <footer>
+    <div class="xfactor">
+      <strong data-en="X-Factor: Bilingual toggle." data-es="X-Factor: Selector bilingüe."></strong>
+      <span data-en=" Click “Español” at the top to switch the entire site between English and Spanish instantly, making it accessible to Dallas’s Spanish-speaking community. Your language choice carries over to the second page." data-es=" Haz clic en “English” arriba para cambiar todo el sitio entre inglés y español al instante, haciéndolo accesible para la comunidad hispanohablante de Dallas. Tu elección de idioma se mantiene en la segunda página."></span>
+    </div>
+    <p data-en="Student class project – not affiliated with or endorsed by Goodwill Dallas." data-es="Proyecto de clase – no afiliado ni respaldado por Goodwill Dallas."></p>
+  </footer>
+
+  <script>
+    (function () {
+      var lang = 'en';
+      try { lang = localStorage.getItem('siteLang') || 'en'; } catch (e) {}
+      var btn = document.getElementById('langBtn');
+
+      function apply(l) {
+        document.querySelectorAll('[data-en]').forEach(function (el) {
+          el.textContent = el.getAttribute('data-' + l);
+        });
+        document.documentElement.lang = l;
+        btn.textContent = l === 'en' ? 'Español' : 'English';
+        try { localStorage.setItem('siteLang', l); } catch (e) {}
+      }
+
+      btn.addEventListener('click', function () {
+        lang = lang === 'en' ? 'es' : 'en';
+        apply(lang);
+      });
+
+      apply(lang);
+    })();
+  </script>
+
+  <!-- ===== CHATLING CHATBOT ===== -->
+  <script> window.chtlConfig = { chatbotId: "2835938614" } </script>
+  <script async data-id="2835938614" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+  <!-- ===== END CHATLING CHATBOT ===== -->
+
+</body>
+</html>
